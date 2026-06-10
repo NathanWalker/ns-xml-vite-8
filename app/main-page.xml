@@ -4,6 +4,7 @@
     <StackLayout class="p-20">
         <Label text="Tap the button" class="h1 text-center" />
         <Button text="TAP" tap="{{ onTap }}" class="-primary" />
+        <Button text="OPEN MODAL" tap="openModal" marginTop="12" />
         <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
     </StackLayout>
 </Page>

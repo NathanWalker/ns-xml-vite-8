@@ -2,7 +2,7 @@ import { Observable } from '@nativescript/core'
 
 export class HelloWorldModel extends Observable {
   private _counter: number
-  private _message: string
+  private _message: string | null = null;
 
   constructor() {
     super()
@@ -12,11 +12,11 @@ export class HelloWorldModel extends Observable {
     this.updateMessage()
   }
 
-  get message(): string {
+  get message(): string | null {
     return this._message
   }
 
-  set message(value: string) {
+  set message(value: string | null) {
     if (this._message !== value) {
       this._message = value
       this.notifyPropertyChange('message', value)
